@@ -1,0 +1,1078 @@
+@font-face{
+    font-family: blackcasper;
+    src: url(/mistor.su/fonts/blackcasper.ttf);
+}
+@font-face{
+    font-family: garamond;
+    src: url(/mistor.su/fonts/garamond2.ttf);
+}
+
+body{
+    margin: 0;
+    font-size: 16pt;
+    font-family: arial;
+    color: #000000;
+    background-color: #000;
+    /*background-image: url('http://localhost/mistor.su/images/bg.jpg'); */ 
+    /*background-attachment:fixed;*/
+    /*background-repeat: no-repeat;*/
+}
+
+a{
+    text-decoration: none;
+}
+
+div.main{
+    width: 1000px;
+    background: #000;
+    margin-left: auto;
+    margin-right: auto;
+/*    border-radius: 25px;*/
+}
+.br{
+    border: 0px solid #77f;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #77f;
+}
+* {
+    color: #ccc;
+}
+input, select{
+    background-color: #333;
+    color: #ddd;
+    border: 1px solid #333;
+}
+.advertising{
+    width: 100%;
+    border-radius: 20px;
+    /*box-shadow: 0px 1px 3px #777;*/
+}
+.avadiv{
+    /*height: 250px;*/
+    width: 250px;
+}
+.avatext{
+    height: 150px;
+    width: 150px;
+    border: 0px solid black;
+    vertical-align: center;
+    text-align: center;
+}
+.avaimg{
+    max-width: 170px;
+    max-height: 170px;
+    border-radius: 10px;
+}
+.arrow{
+    position: absolute;
+    top: 10px;
+    width: 100px;
+    border-radius: 5px;
+    z-index: 13;
+    cursor: pointer;
+    box-shadow: 3px 2px 5px #000;
+}
+.arrow.left{
+    left: -120px;
+
+}  
+.arrow.right{
+    right: -120px;
+}
+.all_pic{
+    width: 140px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    background-color: #444;
+    opacity: 0.1;
+    cursor: pointer;
+    line-height: 22pt;
+}
+/*                                      ###
+                                        #  #
+                                        ###
+                                        #  #
+                                        ###
+
+
+/*.but{
+    background-color: #990099;
+    width: 150px;
+    height: 20px;
+ 
+}
+
+.but:hover {
+    background-color: #094477;
+    width: 150px;
+    height: 20px;
+    
+
+}*/
+#buttonexit{
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: #ffffb3;
+    width: 90px;
+    margin-top: 7px;
+    margin-bottom: 10px;
+}
+.button{
+    border: 0 solid #888;
+    border-radius: 5px;
+    font-size: 12pt;
+    font-weight: bold;
+    height: 25px;
+    background-image: linear-gradient(0deg, #222, #666);
+    box-shadow: 0 0 5px #ddd;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+#big_bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    opacity: 0.9;
+    z-index: 11;
+}
+#big_cont{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    text-align: center;
+    z-index: 12;
+}
+#big_pic{
+    position: relative;
+    top: 10px;
+    max-height: 630px;
+    max-width: 1000px;
+    border: 3px solid #000;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px #000;
+}
+/*                                           ##
+                                            #  #
+                                            #
+                                            #  #
+                                             ##                     */
+.chopper{
+    width: 210px;
+    position: relative;
+    left: 10px;
+    z-index: 5;
+    top: 11px;
+    transition-property: top;
+    transition-duration:  0.5s;
+    transition-timing-function: ease 0;
+}
+.chopper_fw{
+    width: 60px;
+    position: absolute;
+    left: 350px;
+    top: 63px;
+    transition-property: left opacity transform;
+    transition-duration:  0.5s;
+    transition-timing-function: ease 0;
+    opacity: 0;
+
+}
+.chopper_rw{
+    width: 60px;
+    position: absolute;
+    left: -200px;
+    top: 65px;
+    z-index: 0;
+    transition-property: left opacity transform;
+    transition-duration:  0.5s;
+    transition-timing-function: ease 0;
+    opacity: 0;
+}
+.menu_button:hover > .chopper{
+    width: 210px;
+    position: relative;
+    left: 10px;
+    z-index: 5;
+    top: 0;
+}
+.menu_button:hover >.chopper_fw{
+    width: 60px;
+    position: absolute;
+    left: 185px;
+    top: 63px;
+    opacity: 1;
+    transform: rotate(-360deg);
+}
+.menu_button:hover >.chopper_rw{
+    width: 60px;
+    position: absolute;
+    left: 2px;
+    top: 65px;
+    opacity: 1;
+    transform: rotate(360deg);
+}
+.chopper_lt{
+    position: absolute;
+    width: 80px;
+    top: 31px;
+    left: 170px;
+    z-index: 6;
+    opacity: 0;
+    transition-property: opacity top;
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+}
+.menu_button:hover > .chopper_lt{
+    opacity: 1;
+    top: 21px;
+}
+.comment{
+    width: 600px;
+    min-height: 100px;
+    margin-top: 20px;
+    background-color: #171717;
+    border: 0px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px #555;
+    color: #ddd;
+    font-size: 12pt;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: justify;
+    display: inline-block;
+
+}
+/*                                          ###
+                                            #  #
+                                            #  #
+                                            #  #
+                                            ###                     */
+.ducati{
+    width: 150px;
+    height: 109px;
+    background-image: url(../images/ducati_150.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 30px;
+    left: -2000px;
+    z-index: 10;
+    transition-property: left ;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transform: scale(-1, 1);
+}
+.dig_cont{
+/*    margin: auto;*/
+    margin-top: 5px;
+    margin-bottom: 5px; 
+    height: 30px;
+    background-color: #000;
+    text-align: center;
+/*    padding-left: 20px;*/
+    font-family: arial;
+    font-size: 16pt;
+    overflow: hidden;
+}
+.dig{
+    color: #fff;
+    float: left;
+    width: 20px;
+    height: 100%;
+    background-image: linear-gradient(0deg, #000 0%, #444 40%, #888 50%, #444 60%, #000 100%);
+    box-sizing: border-box;
+    margin-left: 3px;
+}
+.dig_red{
+    color: #ddd; 
+    background-image: linear-gradient(0deg, #500 30%, #d00 43%, #f77 50%, #d00 57%, #500 70%); 
+    float: left; 
+    margin-top: -16px;         
+    margin-left: 3px; 
+    width: 20px; 
+    height: 200%; 
+    line-height: 150%
+}
+.menu_button:hover > .ducati{
+    left: 2000px;
+    transform: scale(1, 1);
+}
+/*                                          ####
+                                            #
+                                            ####
+                                            #
+                                            ####                        */
+.enter{
+    text-align: center;
+    font-size: 18pt;
+    font-weight: bold;
+}
+div.email_block{
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px #777;
+    padding: 10px;   
+    box-sizing: border-box;  
+}
+div.email{
+    min-height: 100px;
+    text-align: left;
+    padding: 10px;
+    box-shadow: 1px 1px 3px #777;
+    border-radius: 10px;
+    width: 530px;
+}
+div.email_punct{
+    font-size: 12pt; 
+    font-weight: bold; 
+    border-radius: 7px 0 0 7px; 
+    padding: 5px; 
+    box-shadow: -2px 2px 2px #777;
+}
+.del_email{
+    font-size: 10pt;
+    border-radius: 4px;
+    color: #fff;
+    background-image: linear-gradient(0deg, #900 20%, #f33 50%, #f77 100%);
+    float: right;
+    cursor: pointer;
+}
+img.email{
+    max-height: 70px; 
+    max-width: 50px; 
+    float: left; 
+    margin: 5px 10px 0px 5px;
+    border-radius: 2px;
+}
+/*                                          ####
+                                            #
+                                            ####
+                                            #
+                                            #                               */
+footer{
+    width: 100%;
+    height: 100px;
+    clear: both;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0px 1px 3px #777;
+    margin-bottom: 5px;
+}
+.flag{
+    display: inline-block;
+    background-color: red;
+    border: 1px solid black;
+    width: 25px;
+    height: 12px;
+    background-image: linear-gradient(0deg, #f00 32%, #00f 33%,#00f 65%, #fff 66%);
+}
+.flame{
+	position: absolute;
+    top: 2px;
+    left: 160px;
+    width: 130px;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    animation: flame 4s infinite ease ;
+}
+@keyframes flame{
+        0% {transform: scaleX(0);}
+
+        9% {transform: scaleX(0);   }
+
+        10% {transform: scaleX(0.5);  }
+
+        11% {transform: scaleX(0);  }
+
+        19% {transform: scaleX(0);  }
+
+        20% {transform: scaleX(0.5);  }
+
+        21% {transform: scaleX(0);  }
+
+        79% {transform: scaleX(0);  }
+
+        80% {transform: scaleX(1);  }
+
+        81% {transform: scaleX(0);  }
+
+        100% {transform: scaleX(0); }
+}
+
+.mainpic:hover .flame{
+	transform: scale(1, 1);
+}
+.silencer:hover ~ .flame{
+	transform: scale(1, 1);
+}
+/*                                           ###
+                                            #  
+                                            #  ##
+                                            #   #
+                                             ###                            */
+.garage1{
+    height: 123px;
+    position: absolute;
+    top: 0;
+    left: 42px;
+    z-index: 3;
+    transition-property: opacity;
+    transition-duration: 1.5s;
+    transition-timing-function: step-end;
+}
+.garage2{
+    height: 123px;
+    position: absolute;
+    top: 0;
+    left: 42px;
+
+}
+.garage1:hover {
+    opacity: 0;
+}
+.gates_div{
+    width: 112px;
+    height: 77px;
+    position: absolute;
+    top: 20px;
+    left: 65px;
+    z-index: 4;
+    overflow: hidden;
+}
+.gates_img{
+    width: inherit;
+    position: relative;
+    top: 0;
+    transition-property: top;
+    transition-duration: 1.5s; 
+    transition-timing-function: linear;
+}
+.menu_button:hover > .garage1{
+    opacity: 0;
+}
+.menu_button:hover > .gates_div > .gates_img{
+    top: -98%;
+}
+
+
+/*                                          #  #
+                                            #  #    
+                                            ####
+                                            #  #
+                                            #  #
+*/
+.header{
+     background-image: url(../images/silencer.png);
+
+}
+/*                                          #  #
+                                            # #
+                                            #
+                                            # #
+                                            #  #                            */
+.key{
+    width: 250px;
+    filter: drop-shadow(0 3px 3px #40f);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+}
+
+
+
+/*                                          #
+                                            #
+                                            ###
+*/       
+.left_block{
+    width: 250px;
+    height: 100%;
+    position: static;
+    float: left;  
+}
+#load{
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: #000; 
+    opacity: 0.7; 
+    z-index: 100;
+}
+#load_img{
+    position: fixed; 
+    top: 120px; 
+    text-align: center; 
+    height: 500px; 
+    width: 100%; 
+    z-index: 101; 
+    background-color: #000;   
+}
+#load_cont{
+    position: fixed; 
+    top: 120px; 
+    text-align: center; 
+    height: 500px; 
+    width: 100%; 
+    z-index: 102; 
+    opacity: 1    
+}
+.load{
+    position: relative; 
+    z-index: 102; 
+    width: 80px; 
+    height: 100%; 
+    background-color: #000; 
+    float: left; 
+    border: 0px solid #0f0; 
+    font-weight: bold; 
+    font-size: 50pt; 
+    color: #777;
+    animation: load 3s infinite ease;
+
+}
+@keyframes load{
+    0% {opacity: 1;}
+    50% {opacity: 0.5}
+    100% {opacity: 1}
+}
+/*                                          #   #
+                                            ## ##
+                                            # # #
+                                            #   #                           */
+.mainpic{
+    width: 100%;
+    height: 450px;  /* 450  */
+    z-index: 1;
+    border-radius: 20px;
+    background: url(../images/biker_blue.jpg);
+}
+.menu{
+    width: 100%;
+    height: 150px;
+}
+.menu_button{
+    width: 25%;
+    height: 100%;
+/*    background-color: #111;*/
+    position: relative;
+    float: left;
+/*    border: 1px solid black;  */
+
+}
+.main_road{
+    width: 70px;
+    position: absolute;
+    left: 80px;
+    z-index: 5;
+    transition-property: transform;
+    transition-duration: 1.3s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.5s;
+    backface-visibility: hidden;
+
+ }
+.menu_button:hover > .main_road{
+    transform: rotateY(1800deg);
+ }
+.main_road_back{
+    width: 70px;
+    position: absolute;
+    left: 80px;
+    z-index: 3;
+    transform: rotateY(180deg);
+    transition-property: transform;
+    transition-duration: 1.3s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.5s;
+    backface-visibility: hidden;
+
+}
+.menu_button:hover > .main_road_back{
+    transform: rotateY(1980deg);
+ }
+.menu_text{
+    width: 100%;
+    height: 27px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-image: linear-gradient(0deg, #000, #111);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #222;
+
+}
+.mainplace{
+    width: 740px;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+.mainplacetext{
+    width: 700px;
+    height: 100%;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+}
+.motopic{
+    border: 0px solid green;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    float: left;
+}
+.motopicimg{
+    max-width: 300px;
+    max-height: 200px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.motodata{
+    width: 350px;
+    border: 0px solid green;
+    position: relative;
+    float: right;
+    padding: 10px;
+}
+.motodata td{
+    text-align: right;
+    padding-right: 20px;
+}
+.motodata td + td{
+    text-align: left;
+}
+.motodatadel{
+    background-color: red;
+    width: 120px; 
+    height: 25px; 
+    border-radius: 5px;
+    font-size: 14pt;
+    font-weight: bold;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.motodatacansel{
+    background-color: green;
+    width: 120px; 
+    height: 25px; 
+    border-radius: 5px;
+    font-size: 14pt;
+    font-weight: bold;
+    float: left;
+    cursor: pointer;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.moto_cont{
+    width: 100%; 
+    background-color: #000; 
+    height: 420px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 3px #777;
+}
+
+
+/*                                              #   #
+                                                ##  #
+                                                #  ##
+                                                #   #   */
+div.news{
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 3px #777;
+    padding: 10px;   
+    box-sizing: border-box;  
+}
+table.news{
+    margin-left: 20px;
+}
+table.news td{
+    border: 0px solid #888;
+    margin-bottom: 10px;
+}  
+table.news td + td{
+    text-align: justify;
+    font-size: 12pt;
+    color: #fff;
+    vertical-align: top;
+    padding: 10px;
+}
+.notebook{
+    width: 165px;
+    display: block;
+    margin: auto;
+    opacity: 0.85;
+}
+.note_screen{
+    width: 128px;
+    height: 80px;
+    position: absolute;
+    top: 7px;
+    left: 61px;
+    overflow: hidden;
+    background-color: #444;
+}
+.note_pic{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition-property: top;
+    transition-duration: 1s;
+    transition-timing-function: ease;       /* steps(4, start); */
+}
+.menu_button:hover .note_pic{
+    top: -320px;
+}
+.noreg{
+    height: 25px;
+    width: 250px;
+    margin: auto;
+    padding-top: 5px;
+}
+/*                                           ###
+                                            #   #
+                                            #   #
+                                            #   #
+                                             ###                    */
+img.owner{
+    position: relative; 
+    float: left;
+    top: 10px; 
+    left: 10px; 
+    max-width: 230px;
+    max-height: 300px;
+    border-radius: 5px;
+}
+.owner_info{
+    height: 350px;
+    position: relative;
+    text-align: left;
+    border: 0px solid #fff;
+}
+table.owner{
+    position: relative;
+    top:10px;
+    left: 10px;
+}
+table.owner td{
+    border: 0px solid #777;
+    padding-left: 20px;
+}
+div.owner_moto{
+    border: 0px solid #ddd;
+}
+table.owner_moto td{
+    border: 0px solid #ddd;
+    box-shadow: 1px 2px 1px #222;
+}
+table.owner_moto td + td{
+    width: 500px;
+    vertical-align: top;
+    padding-left: 15px;
+    text-align: left;
+}
+img.owner_moto{
+    max-width: 300px;
+    max-height: 250px;
+    border-radius: 5px;
+    float: left;
+
+}
+table.owner_moto_data td{
+    border: 0px solid #fff;
+    padding-left: 20px;
+    color: #ddd;
+}
+/*                                          ###
+                                            #  #
+                                            #  #
+                                            ###
+                                            #
+                                            #                           */    
+div.div_pic{
+    width: 140px;
+    height: 100px;
+    float: left;
+    text-align: center;
+
+
+}
+img.pic{
+    max-width: 140px;
+    max-height: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+/*                                           ####                    
+                                             #   #                  
+                                             ####              
+                                             #  #                  
+                                             #   #                   */
+.regplace{                  
+    width: 250px;          
+    min-height: 300px;
+    position: relative;      
+    background-image: url(../images/key.png);
+    background-repeat:  no-repeat;
+    border-radius: 20px;
+    box-shadow: 0px 1px 3px #777;
+}
+.regplacetext{
+    padding: 10px;
+}
+.reg{
+    width: inherit;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 3px double black;
+/*    box-shadow: 1px 2px 2px #333;*/
+    color: #000;
+    text-align: left;
+    padding-left: 10px; 
+    font-size: 25px;
+}
+.rus{
+    position: relative;
+    float: right;
+/*    background-color: #555;*/
+    height: 100%;
+    width: 45px;
+    border-left: 2px solid black;
+    text-align: center;
+
+    font-size: 13px;
+    font-weight: bold;
+    color: #000;
+}
+.rez1{
+    width: 150px;
+    height: 100px;
+    border: 0px solid #ddd;
+}
+.rez2{
+    width: 320px;
+    padding-left: 15px;
+    text-align: left;
+    border: 0px solid #ddd;
+    box-shadow: 1px 2px 1px #222;
+}
+.rez3{
+    width: 200px;
+    padding-left: 15px;
+    text-align: left;
+    border: 0px solid #ddd;
+    box-shadow: 1px 2px 1px #222;
+}
+.rezimg{
+    max-width: 150px;
+    max-height: 100px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #555;
+}
+/*                                       ##
+                                        #   
+                                         ##
+                                           #
+                                         ##       */
+#search{
+    border: 0px solid #fff;
+    width: 100%;
+
+}
+#searchrezult{
+    width: 100%;
+    background-color: #fefefe;
+}
+#searchtable{
+    border: 1px solid #777;
+}
+#scountry{
+    border: 1px solid #777;
+    width: 200px;
+}
+#scity{
+    border: 1px solid #777;
+    width: 200px;
+}
+#sbrand{
+    border: 1px solid #777;
+    width: 200px;
+}
+#smodel{
+    border: 1px solid #777;
+    width: 200px;
+}
+#syear{
+    border: 1px solid #777;
+    width: 50px;
+}
+#sowner_id{
+    border: 1px solid #777;
+    width: 50px;
+}
+#simg{
+    max-width: 170px;
+    max-height: 170px;
+}
+.s1{
+    width: 30%;
+    border: 0px solid #777;
+    text-align: right;
+}
+.s2{
+    width: 70%;
+    border: 0px solid #777;
+    padding-left: 20px;
+    text-align: left;
+}
+.stick{
+    height: 101px;
+    position: absolute;
+    top: 22px;
+    left: 113px;
+    box-shadow: 0px 1px 3px #000;
+    z-index: 4;
+}
+.silencer{
+	width: 170px;
+}
+.story_pic_ins{
+    max-width: 200px; 
+    max-height: 150px;
+    border-radius: 10px;
+}
+div.story_data table td{
+    border: 0px solid #aaa;
+    width: 100px;
+    text-align: center;
+}
+div.story_data table td + td{
+    width: 350px;
+ }   
+div.story_data table td + td + td{
+    width: 180px;
+}
+div.story_data table td + td + td + td{
+    width: 100px;
+}
+.story_cont{
+    
+   
+}
+.story{
+    position: relative;
+    background-color: #000;
+/*    box-shadow: 0px 1px 3px #777;*/
+    border-radius: 5px 5px 20px 20px;
+/*    display: table-cell;*/
+    overflow: hidden;
+
+
+}
+/*                                          #####
+                                              #
+                                              #
+                                              #                             */
+
+td.userdatafilled{
+    border: 0px solid #777;
+    padding: 3px 20px 0px 20px;
+}
+#textlink{
+    text-decoration: none;
+    color: #000000;
+}
+#tab_reg td{
+    text-align: right;
+    padding-right: 20px;
+    border: 0px solid #777;
+}
+#tab_reg td + td{
+    text-align: left;
+    border: 0px solid #777;
+}
+.tab_mystory_new{
+    border: 0px solid #aaa;
+    width: 100%;
+}
+.tab_mystory_new td{
+    border: 0px solid #aaa;
+    text-align: right;
+    padding-right: 10px;
+}
+.tab_mystory_new td + td{
+    text-align: left;
+}
+table.mystory{
+    border: 0px solid #fff;
+
+}
+table.mystory td{
+    border: 0px solid #fff;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px #333;
+}
+textarea{
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+table.teh td{
+    border: 0px solid #fff;
+    vertical-align: middle;
+    text-align: right;
+    padding-right: 10px;
+}
+table.teh td + td{
+    text-align: left;
+}
+
+
+
+/*                                          #   #
+                                            #   #
+                                            #   #
+                                            #   #
+                                             ###                        */
+#userdatafilled{
+    border: 0px solid #777; 
+    margin: auto;
+}
+#userdatafilled td{
+    text-align: right;
+    padding-right: 20px;
+}
+#userdatafilled td + td{
+    text-align: left;
+}
+.userdata td{
+    text-align: right;
+    padding-right: 20px;
+}
+.userdata td + td{
+    text-align: left;
+}
+/*                     ============================    ДЛЯ ТЕСТОВ   ===============================         */
+#motoform td{
+    border: 0px solid #fff;
+}
+}
