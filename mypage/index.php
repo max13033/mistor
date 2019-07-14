@@ -467,7 +467,7 @@ if( empty($brand) OR (isset($_GET['updatemoto']) AND $_GET['moto_id'] == $moto_i
 					<td>Год</td>
 					<td>
 						<select name = "year" style = "width: 120px">
-<?							$year = 2018;
+<?							$year = date("Y");
 							while ($year >= 1970) {	
 ?>
 								<option value="<?=$year?>" <?if(isset($_GET['year']) AND $_GET['year'] == $year){echo "selected";} ?> ><?=$year?></option> 	
@@ -501,7 +501,7 @@ if( empty($brand) OR (isset($_GET['updatemoto']) AND $_GET['moto_id'] == $moto_i
 							<option value = "Декабрь ">Декабрь</option>
 						</select>
 						<select name = "owner_from_y" style="width: 60px;">
-<?							$y = 2018;					
+<?							$y = date("Y");					
 							while ($y >= 1960) {		?>
 							<option value = "<?=$y?>"> <?=$y?> </option>								
 <?							$y--;
