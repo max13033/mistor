@@ -28,7 +28,7 @@ $code = rand(1, 999);
 				echo REFRESH_3;
 				exit;
 			}
-			if(preg_match("/[^a-zA_Z0-9_-]/", $password)){
+			if(preg_match("/[^a-zA-Z0-9_-]/", $password)){
 				echo "Пароль содержит запрещённые символы"; 
 				echo REFRESH_3;
 				exit;
